@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17527E3828CE325E00254C77 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E2F28CE325E00254C77 /* EndPoints.swift */; };
+		17527E3928CE325E00254C77 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E3028CE325E00254C77 /* NetworkManager.swift */; };
+		17527E3A28CE325E00254C77 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E3328CE325E00254C77 /* UsersViewModel.swift */; };
+		17527E3B28CE325E00254C77 /* UsersApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E3528CE325E00254C77 /* UsersApiClient.swift */; };
+		17527E3C28CE325E00254C77 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E3728CE325E00254C77 /* UsersModel.swift */; };
+		17527E3E28CE328E00254C77 /* HomeUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E3D28CE328E00254C77 /* HomeUsers.swift */; };
+		17527E4228CE32C600254C77 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17527E4028CE32C600254C77 /* HomeCell.xib */; };
+		17527E4328CE32C600254C77 /* HomeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E4128CE32C600254C77 /* HomeCells.swift */; };
+		17527E4528CE333F00254C77 /* ViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E4428CE333F00254C77 /* ViewConfig.swift */; };
 		1775ADB428CE1E900019BA9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775ADB328CE1E900019BA9E /* AppDelegate.swift */; };
 		1775ADB628CE1E900019BA9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775ADB528CE1E900019BA9E /* SceneDelegate.swift */; };
 		1775ADBB28CE1E900019BA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1775ADB928CE1E900019BA9E /* Main.storyboard */; };
@@ -39,6 +48,15 @@
 
 /* Begin PBXFileReference section */
 		171E8C491496E4D32DC367BC /* Pods-CeibaContacts-CeibaContactsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeibaContacts-CeibaContactsUITests.release.xcconfig"; path = "Target Support Files/Pods-CeibaContacts-CeibaContactsUITests/Pods-CeibaContacts-CeibaContactsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		17527E2F28CE325E00254C77 /* EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		17527E3028CE325E00254C77 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		17527E3328CE325E00254C77 /* UsersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		17527E3528CE325E00254C77 /* UsersApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersApiClient.swift; sourceTree = "<group>"; };
+		17527E3728CE325E00254C77 /* UsersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		17527E3D28CE328E00254C77 /* HomeUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUsers.swift; sourceTree = "<group>"; };
+		17527E4028CE32C600254C77 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		17527E4128CE32C600254C77 /* HomeCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCells.swift; sourceTree = "<group>"; };
+		17527E4428CE333F00254C77 /* ViewConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfig.swift; sourceTree = "<group>"; };
 		1775ADB028CE1E900019BA9E /* CeibaContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeibaContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1775ADB328CE1E900019BA9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1775ADB528CE1E900019BA9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +107,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17527E2E28CE325E00254C77 /* Communs */ = {
+			isa = PBXGroup;
+			children = (
+				17527E4428CE333F00254C77 /* ViewConfig.swift */,
+				17527E2F28CE325E00254C77 /* EndPoints.swift */,
+				17527E3028CE325E00254C77 /* NetworkManager.swift */,
+			);
+			path = Communs;
+			sourceTree = "<group>";
+		};
+		17527E3128CE325E00254C77 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				17527E3F28CE32C600254C77 /* UsersCells */,
+				17527E3228CE325E00254C77 /* ViewModel */,
+				17527E3428CE325E00254C77 /* Network */,
+				17527E3628CE325E00254C77 /* Model */,
+				17527E3D28CE328E00254C77 /* HomeUsers.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		17527E3228CE325E00254C77 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				17527E3328CE325E00254C77 /* UsersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		17527E3428CE325E00254C77 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				17527E3528CE325E00254C77 /* UsersApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		17527E3628CE325E00254C77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17527E3728CE325E00254C77 /* UsersModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		17527E3F28CE32C600254C77 /* UsersCells */ = {
+			isa = PBXGroup;
+			children = (
+				17527E4028CE32C600254C77 /* HomeCell.xib */,
+				17527E4128CE32C600254C77 /* HomeCells.swift */,
+			);
+			path = UsersCells;
+			sourceTree = "<group>";
+		};
 		1775ADA728CE1E900019BA9E = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +187,8 @@
 		1775ADB228CE1E900019BA9E /* CeibaContacts */ = {
 			isa = PBXGroup;
 			children = (
+				17527E2E28CE325E00254C77 /* Communs */,
+				17527E3128CE325E00254C77 /* Users */,
 				1775ADB328CE1E900019BA9E /* AppDelegate.swift */,
 				1775ADB528CE1E900019BA9E /* SceneDelegate.swift */,
 				1775ADB928CE1E900019BA9E /* Main.storyboard */,
@@ -151,7 +226,6 @@
 				5528FA4EC67B5D6189B0FE53 /* Pods-CeibaContactsTests.debug.xcconfig */,
 				F3A49F645DDD2C41EC89EDCD /* Pods-CeibaContactsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -276,6 +350,7 @@
 			files = (
 				1775ADC028CE1E920019BA9E /* LaunchScreen.storyboard in Resources */,
 				1775ADBD28CE1E920019BA9E /* Assets.xcassets in Resources */,
+				17527E4228CE32C600254C77 /* HomeCell.xib in Resources */,
 				1775ADBB28CE1E900019BA9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,8 +479,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17527E3B28CE325E00254C77 /* UsersApiClient.swift in Sources */,
+				17527E3928CE325E00254C77 /* NetworkManager.swift in Sources */,
 				1775ADB428CE1E900019BA9E /* AppDelegate.swift in Sources */,
+				17527E3828CE325E00254C77 /* EndPoints.swift in Sources */,
+				17527E4328CE32C600254C77 /* HomeCells.swift in Sources */,
 				1775ADB628CE1E900019BA9E /* SceneDelegate.swift in Sources */,
+				17527E4528CE333F00254C77 /* ViewConfig.swift in Sources */,
+				17527E3E28CE328E00254C77 /* HomeUsers.swift in Sources */,
+				17527E3A28CE325E00254C77 /* UsersViewModel.swift in Sources */,
+				17527E3C28CE325E00254C77 /* UsersModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
