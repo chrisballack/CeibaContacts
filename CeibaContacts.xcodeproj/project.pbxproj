@@ -12,7 +12,7 @@
 		17527E3A28CE325E00254C77 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E3328CE325E00254C77 /* UsersViewModel.swift */; };
 		17527E3B28CE325E00254C77 /* UsersApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E3528CE325E00254C77 /* UsersApiClient.swift */; };
 		17527E3C28CE325E00254C77 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E3728CE325E00254C77 /* UsersModel.swift */; };
-		17527E3E28CE328E00254C77 /* HomeUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E3D28CE328E00254C77 /* HomeUsers.swift */; };
+		17527E3E28CE328E00254C77 /* HomeUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E3D28CE328E00254C77 /* HomeUsersVC.swift */; };
 		17527E4228CE32C600254C77 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17527E4028CE32C600254C77 /* HomeCell.xib */; };
 		17527E4328CE32C600254C77 /* HomeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E4128CE32C600254C77 /* HomeCells.swift */; };
 		17527E4528CE333F00254C77 /* ViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E4428CE333F00254C77 /* ViewConfig.swift */; };
@@ -26,6 +26,9 @@
 		17527E5B28CE756200254C77 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E5A28CE756200254C77 /* PostModel.swift */; };
 		17527E5D28CE75A700254C77 /* PostApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E5C28CE75A700254C77 /* PostApiClient.swift */; };
 		17527E5F28CE762B00254C77 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E5E28CE762B00254C77 /* PostViewModel.swift */; };
+		17527E6128CE806100254C77 /* Animaciones in Resources */ = {isa = PBXBuildFile; fileRef = 17527E6028CE806100254C77 /* Animaciones */; };
+		17527E6328CE80C100254C77 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E6228CE80C100254C77 /* LoadingView.swift */; };
+		17527E6528CE810200254C77 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17527E6428CE810200254C77 /* LoadingView.xib */; };
 		1775ADB428CE1E900019BA9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775ADB328CE1E900019BA9E /* AppDelegate.swift */; };
 		1775ADB628CE1E900019BA9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775ADB528CE1E900019BA9E /* SceneDelegate.swift */; };
 		1775ADBB28CE1E900019BA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1775ADB928CE1E900019BA9E /* Main.storyboard */; };
@@ -63,7 +66,7 @@
 		17527E3328CE325E00254C77 /* UsersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		17527E3528CE325E00254C77 /* UsersApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersApiClient.swift; sourceTree = "<group>"; };
 		17527E3728CE325E00254C77 /* UsersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
-		17527E3D28CE328E00254C77 /* HomeUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUsers.swift; sourceTree = "<group>"; };
+		17527E3D28CE328E00254C77 /* HomeUsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUsersVC.swift; sourceTree = "<group>"; };
 		17527E4028CE32C600254C77 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		17527E4128CE32C600254C77 /* HomeCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCells.swift; sourceTree = "<group>"; };
 		17527E4428CE333F00254C77 /* ViewConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfig.swift; sourceTree = "<group>"; };
@@ -77,6 +80,9 @@
 		17527E5A28CE756200254C77 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		17527E5C28CE75A700254C77 /* PostApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApiClient.swift; sourceTree = "<group>"; };
 		17527E5E28CE762B00254C77 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		17527E6028CE806100254C77 /* Animaciones */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Animaciones; sourceTree = "<group>"; };
+		17527E6228CE80C100254C77 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		17527E6428CE810200254C77 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		1775ADB028CE1E900019BA9E /* CeibaContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeibaContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1775ADB328CE1E900019BA9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1775ADB528CE1E900019BA9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,9 +136,11 @@
 		17527E2E28CE325E00254C77 /* Communs */ = {
 			isa = PBXGroup;
 			children = (
+				17527E3028CE325E00254C77 /* NetworkManager.swift */,
 				17527E4428CE333F00254C77 /* ViewConfig.swift */,
 				17527E2F28CE325E00254C77 /* EndPoints.swift */,
-				17527E3028CE325E00254C77 /* NetworkManager.swift */,
+				17527E6228CE80C100254C77 /* LoadingView.swift */,
+				17527E6428CE810200254C77 /* LoadingView.xib */,
 			);
 			path = Communs;
 			sourceTree = "<group>";
@@ -142,11 +150,11 @@
 			children = (
 				17527E4C28CE493800254C77 /* Realm */,
 				17527E4828CE436800254C77 /* UsersSQL.swift */,
-				17527E3F28CE32C600254C77 /* UsersCells */,
+				17527E3F28CE32C600254C77 /* HomeCells */,
 				17527E3228CE325E00254C77 /* ViewModel */,
 				17527E3428CE325E00254C77 /* Network */,
 				17527E3628CE325E00254C77 /* Model */,
-				17527E3D28CE328E00254C77 /* HomeUsers.swift */,
+				17527E3D28CE328E00254C77 /* HomeUsersVC.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -175,13 +183,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		17527E3F28CE32C600254C77 /* UsersCells */ = {
+		17527E3F28CE32C600254C77 /* HomeCells */ = {
 			isa = PBXGroup;
 			children = (
 				17527E4028CE32C600254C77 /* HomeCell.xib */,
 				17527E4128CE32C600254C77 /* HomeCells.swift */,
 			);
-			path = UsersCells;
+			path = HomeCells;
 			sourceTree = "<group>";
 		};
 		17527E4C28CE493800254C77 /* Realm */ = {
@@ -263,9 +271,10 @@
 		1775ADB228CE1E900019BA9E /* CeibaContacts */ = {
 			isa = PBXGroup;
 			children = (
-				17527E4F28CE713D00254C77 /* Post */,
+				17527E6028CE806100254C77 /* Animaciones */,
 				17527E2E28CE325E00254C77 /* Communs */,
 				17527E3128CE325E00254C77 /* Users */,
+				17527E4F28CE713D00254C77 /* Post */,
 				1775ADB328CE1E900019BA9E /* AppDelegate.swift */,
 				1775ADB528CE1E900019BA9E /* SceneDelegate.swift */,
 				1775ADB928CE1E900019BA9E /* Main.storyboard */,
@@ -427,9 +436,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				17527E4728CE350500254C77 /* Colors.xcassets in Resources */,
+				17527E6528CE810200254C77 /* LoadingView.xib in Resources */,
 				17527E5428CE726A00254C77 /* PostCell.xib in Resources */,
 				1775ADC028CE1E920019BA9E /* LaunchScreen.storyboard in Resources */,
 				1775ADBD28CE1E920019BA9E /* Assets.xcassets in Resources */,
+				17527E6128CE806100254C77 /* Animaciones in Resources */,
 				17527E4228CE32C600254C77 /* HomeCell.xib in Resources */,
 				1775ADBB28CE1E900019BA9E /* Main.storyboard in Resources */,
 			);
@@ -572,10 +583,11 @@
 				1775ADB628CE1E900019BA9E /* SceneDelegate.swift in Sources */,
 				17527E4B28CE48D300254C77 /* UsersRealm.swift in Sources */,
 				17527E4528CE333F00254C77 /* ViewConfig.swift in Sources */,
-				17527E3E28CE328E00254C77 /* HomeUsers.swift in Sources */,
+				17527E3E28CE328E00254C77 /* HomeUsersVC.swift in Sources */,
 				17527E3A28CE325E00254C77 /* UsersViewModel.swift in Sources */,
 				17527E3C28CE325E00254C77 /* UsersModel.swift in Sources */,
 				17527E4E28CE495100254C77 /* RealmModel.swift in Sources */,
+				17527E6328CE80C100254C77 /* LoadingView.swift in Sources */,
 				17527E4928CE436800254C77 /* UsersSQL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

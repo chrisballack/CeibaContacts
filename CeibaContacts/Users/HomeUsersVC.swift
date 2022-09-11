@@ -26,6 +26,7 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
     
     var StorageType:LocalStorageType = .UserDefault
 
+    @IBOutlet weak var EmptyTable: UILabel!
     @IBOutlet weak var ButtonConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var search: SkyFloatingLabelTextField!{
@@ -50,21 +51,18 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         
     }
     
+    let underKeyboardLayoutConstraint = UnderKeyboardLayoutConstraint()
     let ViewModel = UsersViewModel()
     let SQLUSer = UserSQL()
-    
-    var UserID:Int?
-    let underKeyboardLayoutConstraint = UnderKeyboardLayoutConstraint()
     
     var UsersListOriginal:[UsersModel.UsersData] = []
     var UsersList:[UsersModel.UsersData] = []
     
-    
     let realm = try! Realm()
+    var UserID:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         underKeyboardLayoutConstraint.setup(ButtonConstraint, view: self.view)
         configureInput(input: search, dataInput: "Buscar Usuario")
@@ -86,7 +84,11 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         
     }
     
+    
+    // Obtiene los datos el usuario Desde la fuente de datos seleccionada
     func Getinformation(){
+        
+        showLoadingView(vista: self)
         
         switch StorageType {
             
@@ -98,6 +100,7 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
                     
                     self.UsersList = Result!
                     self.UsersListOriginal = Result!
+                    HideLoadingView(vista: self)
                     self.TableView.reloadData()
                     
                 }
@@ -117,6 +120,7 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
                 
                 self.UsersList = list
                 self.UsersListOriginal = list
+                HideLoadingView(vista: self)
                 self.TableView.reloadData()
                 
                 
@@ -139,6 +143,7 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
                 }
                 
                 self.UsersListOriginal = self.UsersList
+                HideLoadingView(vista: self)
                 self.TableView.reloadData()
                 
                 
@@ -152,9 +157,13 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         
     }
     
+    
+    // Obtiene los usuarios que entrega el servicio Rest
     func GetUsers(){
         
         ViewModel.GetUsers { Result in
+            
+            HideLoadingView(vista: self)
             
             if Result != nil{
                 
@@ -190,7 +199,7 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
                 
             }else{
                 
-                
+                AlertErrorConexion(vista: self)
                 
             }
             
@@ -198,10 +207,9 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         
     }
     
+    // es un observable a cada que se edita un valor en el textfield
     @objc func myTextFieldDidChange(_ textField: UITextField) {
         
-        if textField == search{
-            
             BuscarNombre(nombre:search.text!){
                 
                 (result) -> () in
@@ -213,10 +221,10 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
                 
             }
             
-        }
-        
     }
     
+    
+    // Se encarga de buscar por nombre de el usuario
     func BuscarNombre(nombre:String, completion: @escaping (_ result: [(UsersModel.UsersData)])->()){
         
         var local:[(UsersModel.UsersData)] = []
@@ -259,6 +267,7 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         
     }
     
+    // Es la forma de enviar los datos entre vistas con el uso de segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let vc = segue.destination as? PostVC {
@@ -275,6 +284,7 @@ extension HomeUsers:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        EmptyTable.isHidden = !(UsersList.count == 0)
         return UsersList.count
         
     }
@@ -302,6 +312,7 @@ extension HomeUsers:UITableViewDelegate,UITableViewDataSource{
         input.selectedLineHeight = 0
     }
     
+    // Accion del boton de la tabla
     @objc func GoToPost( sender: UIButton!) {
         
         let i = sender.tag
@@ -330,49 +341,3 @@ extension UIViewController {
     }
     
 }
-
-
-
-
-extension Object {
-    func toDictionary() -> NSDictionary {
-        let properties = self.objectSchema.properties.map { $0.name }
-        let dictionary = self.dictionaryWithValues(forKeys: properties)
-
-        let mutabledic = NSMutableDictionary()
-        mutabledic.setValuesForKeys(dictionary)
-
-        for prop in self.objectSchema.properties as [Property] {
-            // find lists
-            if let nestedObject = self[prop.name] as? Object {
-                mutabledic.setValue(nestedObject.toDictionary(), forKey: prop.name)
-            }
-
-        }
-        return mutabledic
-    }
-
-}
-
-
-
-func convertToDictionary(text: String) -> Any? {
-    
-    if let data = text.data(using: .utf8) {
-        
-        do {
-            
-            return try JSONSerialization.jsonObject(with: data, options: [])
-            
-        } catch {
-            
-            print(error.localizedDescription)
-            
-        }
-    }
-    
-    return nil
-    
-}
-
-

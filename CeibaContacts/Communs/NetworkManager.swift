@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+//Configuracion del Alamofire con la finalidad de tener 3 retrys y configuraciones extras para el Alamofire
 
 let Alamofires: SessionManager = {
     let configuration = URLSessionConfiguration.default

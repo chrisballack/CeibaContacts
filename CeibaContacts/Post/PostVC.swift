@@ -9,6 +9,7 @@ import UIKit
 
 class PostVC: UIViewController {
 
+    @IBOutlet weak var EmptyTable: UILabel!
     @IBOutlet weak var TableView: UITableView!
 
     let ViewModel = PostViewModel()
@@ -26,9 +27,14 @@ class PostVC: UIViewController {
         GetPosts()
     }
     
+    // Obtiene los Post por el id del usuario seleccionado
     func GetPosts(){
         
+        showLoadingView(vista: self)
+        
         ViewModel.GetUsers(UserId: UserID!) { Result in
+            
+            HideLoadingView(vista: self)
             
             if Result != nil{
                 
@@ -37,7 +43,7 @@ class PostVC: UIViewController {
                 
             }else{
                 
-                
+                AlertErrorConexion(vista: self)
                 
             }
             
@@ -48,8 +54,10 @@ class PostVC: UIViewController {
 }
 
 extension PostVC:UITableViewDelegate,UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        EmptyTable.isHidden = !(Posts.count == 0)
         return Posts.count
         
     }

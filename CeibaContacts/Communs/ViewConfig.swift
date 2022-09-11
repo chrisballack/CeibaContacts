@@ -8,6 +8,32 @@
 import Foundation
 import UIKit
 
+var GlbAppName = "CeibaContacts"
+var GlbErrorConexion = "Sorry, a server connection error has occurred, please contact FletX support."
+
+func AlertErrorConexion(vista:UIViewController){
+    
+    DispatchQueue.main.async(execute: {
+        
+        let miAlerta = UIAlertController(title: GlbAppName, message: GlbErrorConexion, preferredStyle: UIAlertController.Style.alert)
+        let titleAttributes = [NSAttributedString.Key.font: UIFont(name: "HurmeGeometricSans3-SemiBold", size: 18)!, NSAttributedString.Key.foregroundColor: UIColor(named: "Colorlabelscomunes")!]
+        let titleString = NSAttributedString(string: GlbAppName, attributes: titleAttributes)
+        let messageAttributes = [NSAttributedString.Key.font: UIFont(name: "HurmeGeometricSans3-Regular", size: 12)!, NSAttributedString.Key.foregroundColor: UIColor(named: "Colorlabelscomunes")!]
+        let messageString = NSAttributedString(string: GlbErrorConexion, attributes: messageAttributes)
+        
+        miAlerta.setValue(messageString, forKey: "attributedMessage")
+        miAlerta.setValue(titleString, forKey: "attributedTitle")
+        let okBoton = UIAlertAction(title: NSLocalizedString("Accept", comment: "").capitalized, style: UIAlertAction.Style.cancel, handler: nil)
+        miAlerta.addAction(okBoton)
+        vista.present(miAlerta, animated: true, completion: nil)
+        
+        
+        
+    })
+    
+}
+
+
 public protocol XIBShadow {
     
     var Shadowview: String? { get set }
