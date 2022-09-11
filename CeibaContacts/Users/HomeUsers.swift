@@ -57,6 +57,9 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
     var UsersListOriginal:[UsersModel.UsersData] = []
     var UsersList:[UsersModel.UsersData] = []
     
+    
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,7 +71,7 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         self.title = "Prueba de ingreso"
         
         //Aca Puedes Cambiar el Como guardara el Programa los datos dependiendo de la libreria
-        StorageType = .SQL
+        StorageType = .UserDefault
         
         if StorageType == .SQL{
             
@@ -76,10 +79,10 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
             
         }
         
+        
         self.Getinformation()
         
     }
-    
     
     func Getinformation(){
         
@@ -122,7 +125,27 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
             }
             
         case .Realm:
-            break
+            
+            if realm.isEmpty == false{
+                
+                let Users = self.realm.objects(UsersRealmModel.self)
+                
+                for user in Users{
+                    
+                    self.UsersList.append(UsersModel.UsersData.init(Id: user.id, Name: user.name!, Email: user.email!, Phone: user.phone!))
+                    
+                }
+                
+                self.UsersListOriginal = self.UsersList
+                self.TableView.reloadData()
+                
+                
+            }else{
+                
+                self.GetUsers()
+                
+            }
+            
         }
         
     }
@@ -140,6 +163,22 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
                         self.SQLUSer.insertUser(IdFunc: User.id!, NameFunc: User.name!, PhoneFunc: User.phone!, EmailFunc: User.email!)
                         
                     }
+                    
+                }
+                
+                if self.StorageType == .Realm{
+                    
+                    
+                    for User in Result!{
+                        
+                        try! self.realm.write {
+                            self.realm.add(type(of: UsersRealmModel()).init(User.id ?? -1, name: User.name, username: User.username, email: User.email, phone: User.phone, website: User.website,Address: type(of: Address()).init(User.address?.street, suite: User.address?.suite, city: User.address?.city, zipcode: User.address?.zipcode, Geo: type(of: Geo()).init(User.address?.geo?.lat, lng: User.address?.geo?.lng)), company: type(of: Company()).init(User.company?.name, catchPhrase: User.company?.catchPhrase, bs: User.company?.bs)))
+                            }
+                        
+                    }
+                    
+                    
+                    
                     
                 }
                 
@@ -269,3 +308,49 @@ extension UIViewController {
     }
     
 }
+
+
+
+
+extension Object {
+    func toDictionary() -> NSDictionary {
+        let properties = self.objectSchema.properties.map { $0.name }
+        let dictionary = self.dictionaryWithValues(forKeys: properties)
+
+        let mutabledic = NSMutableDictionary()
+        mutabledic.setValuesForKeys(dictionary)
+
+        for prop in self.objectSchema.properties as [Property] {
+            // find lists
+            if let nestedObject = self[prop.name] as? Object {
+                mutabledic.setValue(nestedObject.toDictionary(), forKey: prop.name)
+            }
+
+        }
+        return mutabledic
+    }
+
+}
+
+
+
+func convertToDictionary(text: String) -> Any? {
+    
+    if let data = text.data(using: .utf8) {
+        
+        do {
+            
+            return try JSONSerialization.jsonObject(with: data, options: [])
+            
+        } catch {
+            
+            print(error.localizedDescription)
+            
+        }
+    }
+    
+    return nil
+    
+}
+
+

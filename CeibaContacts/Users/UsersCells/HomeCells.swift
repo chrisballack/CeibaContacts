@@ -14,5 +14,4 @@ class HomeCell:UITableViewCell{
     @IBOutlet weak var PhoneNumber: UILabel!
     @IBOutlet weak var Email: UILabel!
     
-    
 }

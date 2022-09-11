@@ -7,127 +7,82 @@
 
 import Foundation
 import Realm
+import UIKit
+import RealmSwift
 
 
-class UsersRealmModel:RealmSwiftObject{
+class UsersRealmModel:Object{
     
-    struct UsersData : Codable {
-        let id : Int?
-        let name : String?
-        let username : String?
-        let email : String?
-        let address : Address?
-        let phone : String?
-        let website : String?
-        let company : Company?
-
-        enum CodingKeys: String, CodingKey {
-
-            case id = "id"
-            case name = "name"
-            case username = "username"
-            case email = "email"
-            case address = "address"
-            case phone = "phone"
-            case website = "website"
-            case company = "company"
-        }
-        
-        init(Id:Int,Name:String,Email:String,Phone:String){
-            
-            id = Id
-            name = Name
-            username = nil
-            email = Email
-            address = nil
-            phone = Phone
-            website = nil
-            company = nil
-            
-        }
-
-        init(from decoder: Decoder) throws {
-            let values = try decoder.container(keyedBy: CodingKeys.self)
-            id = try values.decodeIfPresent(Int.self, forKey: .id)
-            name = try values.decodeIfPresent(String.self, forKey: .name)
-            username = try values.decodeIfPresent(String.self, forKey: .username)
-            email = try values.decodeIfPresent(String.self, forKey: .email)
-            address = try values.decodeIfPresent(Address.self, forKey: .address)
-            phone = try values.decodeIfPresent(String.self, forKey: .phone)
-            website = try values.decodeIfPresent(String.self, forKey: .website)
-            company = try values.decodeIfPresent(Company.self, forKey: .company)
-        }
-
-    }
+    @objc dynamic var id = 0
+    @objc dynamic var name: String?
+    @objc dynamic var username: String?
+    @objc dynamic var email: String?
+    @objc dynamic var address:  Address?
+    @objc dynamic var phone: String?
+    @objc dynamic var website: String?
+    @objc dynamic var company : Company?
     
+    required convenience init(_ id: Int, name: String?, username: String?,email:String?,phone:String?,website:String? ,Address : Address?,company:Company?) {
+            self.init()
+        self.id = id
+        self.name = name
+        self.username = username
+        self.email = email
+        self.phone = phone
+        self.website = website
+        self.address = Address
+        self.company = company
+        }
     
-    struct Geo : Codable {
-        let lat : String?
-        let lng : String?
-
-        enum CodingKeys: String, CodingKey {
-
-            case lat = "lat"
-            case lng = "lng"
-        }
-
-        init(from decoder: Decoder) throws {
-            let values = try decoder.container(keyedBy: CodingKeys.self)
-            lat = try values.decodeIfPresent(String.self, forKey: .lat)
-            lng = try values.decodeIfPresent(String.self, forKey: .lng)
-        }
-
-    }
-
-    struct Company : Codable {
-        let name : String?
-        let catchPhrase : String?
-        let bs : String?
-
-        enum CodingKeys: String, CodingKey {
-
-            case name = "name"
-            case catchPhrase = "catchPhrase"
-            case bs = "bs"
-        }
-
-        init(from decoder: Decoder) throws {
-            let values = try decoder.container(keyedBy: CodingKeys.self)
-            name = try values.decodeIfPresent(String.self, forKey: .name)
-            catchPhrase = try values.decodeIfPresent(String.self, forKey: .catchPhrase)
-            bs = try values.decodeIfPresent(String.self, forKey: .bs)
-        }
-
-    }
-
-    
-    struct Address : Codable {
-        let street : String?
-        let suite : String?
-        let city : String?
-        let zipcode : String?
-        let geo : Geo?
-
-        enum CodingKeys: String, CodingKey {
-
-            case street = "street"
-            case suite = "suite"
-            case city = "city"
-            case zipcode = "zipcode"
-            case geo = "geo"
-        }
-
-        init(from decoder: Decoder) throws {
-            let values = try decoder.container(keyedBy: CodingKeys.self)
-            street = try values.decodeIfPresent(String.self, forKey: .street)
-            suite = try values.decodeIfPresent(String.self, forKey: .suite)
-            city = try values.decodeIfPresent(String.self, forKey: .city)
-            zipcode = try values.decodeIfPresent(String.self, forKey: .zipcode)
-            geo = try values.decodeIfPresent(Geo.self, forKey: .geo)
-        }
-
-    }
-
-
     
 }
+
+class Address : Object {
+    
+    @objc dynamic var street: String?
+    @objc dynamic var suite: String?
+    @objc dynamic var city: String?
+    @objc dynamic var zipcode: String?
+    @objc dynamic var geo: Geo?
+    
+    required convenience init(_ street: String?, suite: String?, city: String?,zipcode:String?,Geo:Geo?) {
+            self.init()
+        self.street = street
+        self.suite = suite
+        self.city = city
+        self.zipcode = zipcode
+        self.geo = Geo
+        }
+    
+
+}
+
+class Geo: Object {
+    
+    @objc dynamic var lat : String?
+    @objc dynamic var lng : String?
+    
+    required convenience init(_ lat: String?, lng: String?) {
+            self.init()
+        self.lat = lat
+        self.lng = lng
+        }
+    
+}
+
+class Company: Object  {
+    
+    @objc dynamic var name : String?
+    @objc dynamic var catchPhrase : String?
+    @objc dynamic var bs : String?
+    
+    required convenience init(_ name: String?, catchPhrase: String?, bs: String?) {
+            self.init()
+        self.name = name
+        self.catchPhrase = catchPhrase
+        self.bs = bs
+        }
+    
+}
+
+

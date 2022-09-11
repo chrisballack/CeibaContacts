@@ -35,7 +35,7 @@
             </objects>
             <point key="canvasLocation" x="-825" y="42"/>
         </scene>
-        <!--Prueba de ingreso-->
+        <!--Users-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeUsers" customModule="CeibaContacts" customModuleProvider="target" sceneMemberID="viewController">
@@ -104,21 +104,57 @@
                             <constraint firstItem="vgD-Qk-G6U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dzC-fr-zMN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Prueba de ingreso" id="jbu-f3-2Tj"/>
+                    <navigationItem key="navigationItem" title="Users" id="jbu-f3-2Tj"/>
                     <connections>
                         <outlet property="ButtonConstraint" destination="WuF-c3-LoN" id="lFs-Wh-KWD"/>
                         <outlet property="TableView" destination="o8b-en-lq0" id="aEq-4M-Ygs"/>
                         <outlet property="search" destination="3IM-5g-FGV" id="xoh-ot-Zv9"/>
+                        <segue destination="PmA-Eh-Qmn" kind="show" identifier="Post" id="ek3-oW-qig"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3" y="42"/>
         </scene>
+        <!--Post-->
+        <scene sceneID="xWO-Bb-tzT">
+            <objects>
+                <viewController title="Post" id="PmA-Eh-Qmn" customClass="PostVC" customModule="CeibaContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vby-Vk-mu3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PnW-U1-fYX">
+                                <rect key="frame" x="0.0" y="96" width="414" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PmA-Eh-Qmn" id="2aZ-xD-pNE"/>
+                                    <outlet property="delegate" destination="PmA-Eh-Qmn" id="O0u-tK-yq5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZHq-XG-fzL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PnW-U1-fYX" firstAttribute="top" secondItem="ZHq-XG-fzL" secondAttribute="top" constant="8" id="40E-qs-0rj"/>
+                            <constraint firstItem="ZHq-XG-fzL" firstAttribute="bottom" secondItem="PnW-U1-fYX" secondAttribute="bottom" id="b7y-Ub-7Pi"/>
+                            <constraint firstItem="ZHq-XG-fzL" firstAttribute="trailing" secondItem="PnW-U1-fYX" secondAttribute="trailing" id="bBf-aF-Jbf"/>
+                            <constraint firstItem="PnW-U1-fYX" firstAttribute="leading" secondItem="ZHq-XG-fzL" secondAttribute="leading" id="siA-Ni-Nsw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Posts" id="JrG-RY-CH7"/>
+                    <connections>
+                        <outlet property="TableView" destination="PnW-U1-fYX" id="adV-fy-xen"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6v-5N-8dX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="42"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="3IM-5g-FGV">
-            <size key="intrinsicContentSize" width="374" height="36.493671875000004"/>
+            <size key="intrinsicContentSize" width="38" height="15.5"/>
         </designable>
     </designables>
     <resources>

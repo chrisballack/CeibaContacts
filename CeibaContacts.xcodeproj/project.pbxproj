@@ -20,6 +20,9 @@
 		17527E4928CE436800254C77 /* UsersSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E4828CE436800254C77 /* UsersSQL.swift */; };
 		17527E4B28CE48D300254C77 /* UsersRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E4A28CE48D300254C77 /* UsersRealm.swift */; };
 		17527E4E28CE495100254C77 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E4D28CE495100254C77 /* RealmModel.swift */; };
+		17527E5128CE71E600254C77 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E5028CE71E600254C77 /* PostVC.swift */; };
+		17527E5428CE726A00254C77 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17527E5328CE726A00254C77 /* PostCell.xib */; };
+		17527E5628CE734000254C77 /* PostCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17527E5528CE734000254C77 /* PostCells.swift */; };
 		1775ADB428CE1E900019BA9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775ADB328CE1E900019BA9E /* AppDelegate.swift */; };
 		1775ADB628CE1E900019BA9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775ADB528CE1E900019BA9E /* SceneDelegate.swift */; };
 		1775ADBB28CE1E900019BA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1775ADB928CE1E900019BA9E /* Main.storyboard */; };
@@ -65,6 +68,9 @@
 		17527E4828CE436800254C77 /* UsersSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSQL.swift; sourceTree = "<group>"; };
 		17527E4A28CE48D300254C77 /* UsersRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRealm.swift; sourceTree = "<group>"; };
 		17527E4D28CE495100254C77 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		17527E5028CE71E600254C77 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		17527E5328CE726A00254C77 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		17527E5528CE734000254C77 /* PostCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCells.swift; sourceTree = "<group>"; };
 		1775ADB028CE1E900019BA9E /* CeibaContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeibaContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1775ADB328CE1E900019BA9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1775ADB528CE1E900019BA9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +187,24 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		17527E4F28CE713D00254C77 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				17527E5228CE725700254C77 /* Cells */,
+				17527E5028CE71E600254C77 /* PostVC.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		17527E5228CE725700254C77 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				17527E5328CE726A00254C77 /* PostCell.xib */,
+				17527E5528CE734000254C77 /* PostCells.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1775ADA728CE1E900019BA9E = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +230,7 @@
 		1775ADB228CE1E900019BA9E /* CeibaContacts */ = {
 			isa = PBXGroup;
 			children = (
+				17527E4F28CE713D00254C77 /* Post */,
 				17527E2E28CE325E00254C77 /* Communs */,
 				17527E3128CE325E00254C77 /* Users */,
 				1775ADB328CE1E900019BA9E /* AppDelegate.swift */,
@@ -369,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17527E4728CE350500254C77 /* Colors.xcassets in Resources */,
+				17527E5428CE726A00254C77 /* PostCell.xib in Resources */,
 				1775ADC028CE1E920019BA9E /* LaunchScreen.storyboard in Resources */,
 				1775ADBD28CE1E920019BA9E /* Assets.xcassets in Resources */,
 				17527E4228CE32C600254C77 /* HomeCell.xib in Resources */,
@@ -502,8 +528,10 @@
 			files = (
 				17527E3B28CE325E00254C77 /* UsersApiClient.swift in Sources */,
 				17527E3928CE325E00254C77 /* NetworkManager.swift in Sources */,
+				17527E5628CE734000254C77 /* PostCells.swift in Sources */,
 				1775ADB428CE1E900019BA9E /* AppDelegate.swift in Sources */,
 				17527E3828CE325E00254C77 /* EndPoints.swift in Sources */,
+				17527E5128CE71E600254C77 /* PostVC.swift in Sources */,
 				17527E4328CE32C600254C77 /* HomeCells.swift in Sources */,
 				1775ADB628CE1E900019BA9E /* SceneDelegate.swift in Sources */,
 				17527E4B28CE48D300254C77 /* UsersRealm.swift in Sources */,
