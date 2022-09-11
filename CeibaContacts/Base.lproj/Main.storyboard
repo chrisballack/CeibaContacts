@@ -142,7 +142,9 @@
                             <constraint firstItem="PnW-U1-fYX" firstAttribute="leading" secondItem="ZHq-XG-fzL" secondAttribute="leading" id="siA-Ni-Nsw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Posts" id="JrG-RY-CH7"/>
+                    <navigationItem key="navigationItem" title="Posts" id="JrG-RY-CH7">
+                        <barButtonItem key="backBarButtonItem" title="Atras" id="1U3-Sv-w0C"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="TableView" destination="PnW-U1-fYX" id="adV-fy-xen"/>
                     </connections>
@@ -157,6 +159,7 @@
             <size key="intrinsicContentSize" width="38" height="15.5"/>
         </designable>
     </designables>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <namedColor name="HomeGreenColor">
             <color red="0.17254901960784313" green="0.2627450980392157" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

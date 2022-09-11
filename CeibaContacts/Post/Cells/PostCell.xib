@@ -20,16 +20,18 @@
                         <rect key="frame" x="16" y="3" width="382" height="123"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yf2-g0-AI4">
-                                <rect key="frame" x="8" y="0.0" width="366" height="123"/>
+                                <rect key="frame" x="8" y="8" width="366" height="107"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN6-jr-3wD">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="56.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN6-jr-3wD">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="48.5"/>
+                                        <string key="text">lksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknl</string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o1-VK-ar5">
-                                        <rect key="frame" x="0.0" y="66.5" width="366" height="56.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o1-VK-ar5">
+                                        <rect key="frame" x="0.0" y="58.5" width="366" height="48.5"/>
+                                        <string key="text">lksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknllksgjdnkdskgklnsdnklgknl</string>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -40,8 +42,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Yf2-g0-AI4" firstAttribute="leading" secondItem="hiT-E3-9iw" secondAttribute="leading" constant="8" id="Ptf-6U-JNF"/>
-                            <constraint firstAttribute="bottom" secondItem="Yf2-g0-AI4" secondAttribute="bottom" id="WUq-yy-0GX"/>
-                            <constraint firstItem="Yf2-g0-AI4" firstAttribute="top" secondItem="hiT-E3-9iw" secondAttribute="top" id="gdn-pC-q4L"/>
+                            <constraint firstAttribute="bottom" secondItem="Yf2-g0-AI4" secondAttribute="bottom" constant="8" id="WUq-yy-0GX"/>
+                            <constraint firstItem="Yf2-g0-AI4" firstAttribute="top" secondItem="hiT-E3-9iw" secondAttribute="top" constant="8" id="gdn-pC-q4L"/>
                             <constraint firstAttribute="trailing" secondItem="Yf2-g0-AI4" secondAttribute="trailing" constant="8" id="kAR-8Y-xOO"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

@@ -15,6 +15,9 @@ struct GetURLs{
     //Users
     static let Users = "/users"
     
+    //Post
+    static let UsersById = "/posts?userId={User_Id}"
+    
 }
 
 

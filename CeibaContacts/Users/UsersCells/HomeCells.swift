@@ -13,5 +13,6 @@ class HomeCell:UITableViewCell{
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var PhoneNumber: UILabel!
     @IBOutlet weak var Email: UILabel!
+    @IBOutlet weak var ButtonPublics: UIButton!
     
 }

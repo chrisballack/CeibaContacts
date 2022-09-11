@@ -52,6 +52,8 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
     
     let ViewModel = UsersViewModel()
     let SQLUSer = UserSQL()
+    
+    var UserID:Int?
     let underKeyboardLayoutConstraint = UnderKeyboardLayoutConstraint()
     
     var UsersListOriginal:[UsersModel.UsersData] = []
@@ -256,7 +258,17 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         }
         
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let vc = segue.destination as? PostVC {
+            
+            vc.UserID = UserID
+            
+        }
+        
+    }
+    
 }
 
 extension HomeUsers:UITableViewDelegate,UITableViewDataSource{
@@ -275,6 +287,8 @@ extension HomeUsers:UITableViewDelegate,UITableViewDataSource{
         cell.Name.text = UsersList[i].name ?? ""
         cell.PhoneNumber.text = UsersList[i].phone ?? ""
         cell.Email.text = UsersList[i].email ?? ""
+        cell.ButtonPublics.tag = i
+        cell.ButtonPublics.addTarget(self, action: #selector(GoToPost), for: UIControl.Event.touchUpInside)
         cell.selectionStyle = .none
         return cell
         
@@ -286,6 +300,14 @@ extension HomeUsers:UITableViewDelegate,UITableViewDataSource{
         input.selectedTitleColor = UIColor(named: "HomeGreenColor")!
         input.lineHeight = 0
         input.selectedLineHeight = 0
+    }
+    
+    @objc func GoToPost( sender: UIButton!) {
+        
+        let i = sender.tag
+        UserID = UsersList[i].id
+        self.performSegue(withIdentifier: "Post", sender: nil)
+    
     }
     
 }

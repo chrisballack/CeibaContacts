@@ -110,6 +110,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="ButtonPublics" destination="0fw-Ht-g0i" id="MGU-Aa-IEF"/>
                 <outlet property="Email" destination="ywg-Ha-aic" id="EmU-kV-ZW0"/>
                 <outlet property="Name" destination="m3V-xe-d7t" id="CMV-Jr-2T8"/>
                 <outlet property="PhoneNumber" destination="OXd-64-QE8" id="d6N-1v-PNw"/>
