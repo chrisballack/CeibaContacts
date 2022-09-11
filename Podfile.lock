@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
   - lottie-ios (3.4.2)
+  - SkyFloatingLabelTextField (3.8.0)
   - SQLite.swift (0.13.3):
     - SQLite.swift/standard (= 0.13.3)
   - SQLite.swift/standard (0.13.3)
@@ -8,19 +9,22 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - lottie-ios
+  - SkyFloatingLabelTextField (~> 3.0)
   - SQLite.swift (~> 0.13.3)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - lottie-ios
+    - SkyFloatingLabelTextField
     - SQLite.swift
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   lottie-ios: 6bbc53eef6957e4744a50321507015fba72d8ca6
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
 
-PODFILE CHECKSUM: 18fa846b81a963579bbaf8931051664a1b9034d6
+PODFILE CHECKSUM: f4d21d9b924fb1cd512519efd02b87f795eb0c4e
 
 COCOAPODS: 1.11.3
