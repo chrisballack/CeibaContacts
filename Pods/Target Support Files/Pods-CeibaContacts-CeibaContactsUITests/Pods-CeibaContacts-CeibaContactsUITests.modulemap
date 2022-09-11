@@ -1,0 +1,6 @@
+framework module Pods_CeibaContacts_CeibaContactsUITests {
+  umbrella header "Pods-CeibaContacts-CeibaContactsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

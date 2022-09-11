@@ -15,6 +15,9 @@
 		1775ADCB28CE1E920019BA9E /* CeibaContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775ADCA28CE1E920019BA9E /* CeibaContactsTests.swift */; };
 		1775ADD528CE1E920019BA9E /* CeibaContactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775ADD428CE1E920019BA9E /* CeibaContactsUITests.swift */; };
 		1775ADD728CE1E920019BA9E /* CeibaContactsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775ADD628CE1E920019BA9E /* CeibaContactsUITestsLaunchTests.swift */; };
+		898ED6AC3B20EA1E4501FC69 /* Pods_CeibaContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EDE234160A08ED3FC361AD /* Pods_CeibaContacts.framework */; };
+		B4E05AB13E951A401BCF7626 /* Pods_CeibaContacts_CeibaContactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544E1BB82A70A568FCD18047 /* Pods_CeibaContacts_CeibaContactsUITests.framework */; };
+		BBA775780EED9D976D4AABEF /* Pods_CeibaContactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E8CFF7A0432EFF0D0A0D32 /* Pods_CeibaContactsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171E8C491496E4D32DC367BC /* Pods-CeibaContacts-CeibaContactsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeibaContacts-CeibaContactsUITests.release.xcconfig"; path = "Target Support Files/Pods-CeibaContacts-CeibaContactsUITests/Pods-CeibaContacts-CeibaContactsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1775ADB028CE1E900019BA9E /* CeibaContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeibaContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1775ADB328CE1E900019BA9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1775ADB528CE1E900019BA9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		1775ADD028CE1E920019BA9E /* CeibaContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeibaContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1775ADD428CE1E920019BA9E /* CeibaContactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeibaContactsUITests.swift; sourceTree = "<group>"; };
 		1775ADD628CE1E920019BA9E /* CeibaContactsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeibaContactsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		36A532FD0A458F094D593472 /* Pods-CeibaContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeibaContacts.debug.xcconfig"; path = "Target Support Files/Pods-CeibaContacts/Pods-CeibaContacts.debug.xcconfig"; sourceTree = "<group>"; };
+		40E8CFF7A0432EFF0D0A0D32 /* Pods_CeibaContactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CeibaContactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		544E1BB82A70A568FCD18047 /* Pods_CeibaContacts_CeibaContactsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CeibaContacts_CeibaContactsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5528FA4EC67B5D6189B0FE53 /* Pods-CeibaContactsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeibaContactsTests.debug.xcconfig"; path = "Target Support Files/Pods-CeibaContactsTests/Pods-CeibaContactsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		59EDE234160A08ED3FC361AD /* Pods_CeibaContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CeibaContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86613F0DBF7E4F98B7ABD042 /* Pods-CeibaContacts-CeibaContactsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeibaContacts-CeibaContactsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CeibaContacts-CeibaContactsUITests/Pods-CeibaContacts-CeibaContactsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		93C4E689BA398D091C6F57BA /* Pods-CeibaContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeibaContacts.release.xcconfig"; path = "Target Support Files/Pods-CeibaContacts/Pods-CeibaContacts.release.xcconfig"; sourceTree = "<group>"; };
+		F3A49F645DDD2C41EC89EDCD /* Pods-CeibaContactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeibaContactsTests.release.xcconfig"; path = "Target Support Files/Pods-CeibaContactsTests/Pods-CeibaContactsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898ED6AC3B20EA1E4501FC69 /* Pods_CeibaContacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA775780EED9D976D4AABEF /* Pods_CeibaContactsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E05AB13E951A401BCF7626 /* Pods_CeibaContacts_CeibaContactsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				1775ADC928CE1E920019BA9E /* CeibaContactsTests */,
 				1775ADD328CE1E920019BA9E /* CeibaContactsUITests */,
 				1775ADB128CE1E900019BA9E /* Products */,
+				4CC8ECD5B0E7AD4B71D26EC0 /* Pods */,
+				DBF9FA7659189599DB686182 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +139,30 @@
 				1775ADD628CE1E920019BA9E /* CeibaContactsUITestsLaunchTests.swift */,
 			);
 			path = CeibaContactsUITests;
+			sourceTree = "<group>";
+		};
+		4CC8ECD5B0E7AD4B71D26EC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36A532FD0A458F094D593472 /* Pods-CeibaContacts.debug.xcconfig */,
+				93C4E689BA398D091C6F57BA /* Pods-CeibaContacts.release.xcconfig */,
+				86613F0DBF7E4F98B7ABD042 /* Pods-CeibaContacts-CeibaContactsUITests.debug.xcconfig */,
+				171E8C491496E4D32DC367BC /* Pods-CeibaContacts-CeibaContactsUITests.release.xcconfig */,
+				5528FA4EC67B5D6189B0FE53 /* Pods-CeibaContactsTests.debug.xcconfig */,
+				F3A49F645DDD2C41EC89EDCD /* Pods-CeibaContactsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DBF9FA7659189599DB686182 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59EDE234160A08ED3FC361AD /* Pods_CeibaContacts.framework */,
+				544E1BB82A70A568FCD18047 /* Pods_CeibaContacts_CeibaContactsUITests.framework */,
+				40E8CFF7A0432EFF0D0A0D32 /* Pods_CeibaContactsTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +577,7 @@
 		};
 		1775ADDB28CE1E920019BA9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A532FD0A458F094D593472 /* Pods-CeibaContacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -564,6 +606,7 @@
 		};
 		1775ADDC28CE1E920019BA9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93C4E689BA398D091C6F57BA /* Pods-CeibaContacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -592,6 +635,7 @@
 		};
 		1775ADDE28CE1E920019BA9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5528FA4EC67B5D6189B0FE53 /* Pods-CeibaContactsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -611,6 +655,7 @@
 		};
 		1775ADDF28CE1E920019BA9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3A49F645DDD2C41EC89EDCD /* Pods-CeibaContactsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -630,6 +675,7 @@
 		};
 		1775ADE128CE1E920019BA9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86613F0DBF7E4F98B7ABD042 /* Pods-CeibaContacts-CeibaContactsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -647,6 +693,7 @@
 		};
 		1775ADE228CE1E920019BA9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 171E8C491496E4D32DC367BC /* Pods-CeibaContacts-CeibaContactsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
