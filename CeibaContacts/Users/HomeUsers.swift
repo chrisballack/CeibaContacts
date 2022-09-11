@@ -8,8 +8,21 @@
 import UIKit
 import SkyFloatingLabelTextField
 import UnderKeyboard
+import SwiftyUserDefaults
+
+var UsersData = DefaultsKey<Data?>("UsersListInfo")
+
+enum LocalStorageType{
+    
+    case UserDefault
+    case SQL
+    case Realm
+    
+}
 
 class HomeUsers: UIViewController,UITextFieldDelegate {
+    
+    var StorageType:LocalStorageType = .UserDefault
 
     @IBOutlet weak var ButtonConstraint: NSLayoutConstraint!
     
@@ -50,10 +63,34 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         self.hideKeyboardWhenTappedAround()
         
         self.title = "Prueba de ingreso"
-        self.GetUsers()
+        self.Getinformation()
         
     }
     
+    
+    func Getinformation(){
+        
+        if StorageType == .UserDefault{
+            
+            if Defaults[UsersData] != nil{
+                
+                ViewModel.GetUsersWithData(data: Defaults[UsersData]!) { Result in
+                    
+                    self.UsersList = Result!
+                    self.UsersListOriginal = Result!
+                    self.TableView.reloadData()
+                    
+                }
+                
+            }else{
+                
+                self.GetUsers()
+                
+            }
+            
+        }
+        
+    }
     
     func GetUsers(){
         

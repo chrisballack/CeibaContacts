@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftyUserDefaults
 
 class UsersViewModel{
 
@@ -16,6 +17,12 @@ class UsersViewModel{
             switch response.result {
                 
             case .success(_):
+                
+                if Defaults[UsersData] == nil{
+                    
+                    Defaults[UsersData] = response.data!
+                    
+                }
                 
                 if let Data = try? JSONDecoder().decode([UsersModel.UsersData].self, from: response.data!) as [UsersModel.UsersData]{
                     
@@ -37,6 +44,21 @@ class UsersViewModel{
             }
             
         }
+    }
+    
+    func GetUsersWithData(data:Data,completion : @escaping ([UsersModel.UsersData]?) -> ()) {
+        
+                if let Data = try? JSONDecoder().decode([UsersModel.UsersData].self, from: data) as [UsersModel.UsersData]{
+                    
+                    completion(Data)
+                    
+                }else{
+                    
+                    completion(nil)
+                    
+                }
+        
+            
     }
 
 }
