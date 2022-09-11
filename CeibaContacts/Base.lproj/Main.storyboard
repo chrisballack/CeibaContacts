@@ -83,7 +83,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="o8b-en-lq0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="o8b-en-lq0">
                                 <rect key="frame" x="0.0" y="158" width="414" height="704"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -106,6 +106,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Prueba de ingreso" id="jbu-f3-2Tj"/>
                     <connections>
+                        <outlet property="ButtonConstraint" destination="WuF-c3-LoN" id="lFs-Wh-KWD"/>
                         <outlet property="TableView" destination="o8b-en-lq0" id="aEq-4M-Ygs"/>
                         <outlet property="search" destination="3IM-5g-FGV" id="xoh-ot-Zv9"/>
                     </connections>
@@ -117,7 +118,7 @@
     </scenes>
     <designables>
         <designable name="3IM-5g-FGV">
-            <size key="intrinsicContentSize" width="38" height="15.5"/>
+            <size key="intrinsicContentSize" width="374" height="36.493671875000004"/>
         </designable>
     </designables>
     <resources>

@@ -7,10 +7,23 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import UnderKeyboard
 
-class HomeUsers: UIViewController {
+class HomeUsers: UIViewController,UITextFieldDelegate {
 
-    @IBOutlet weak var search: SkyFloatingLabelTextField!
+    @IBOutlet weak var ButtonConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var search: SkyFloatingLabelTextField!{
+        
+        didSet{
+            
+            search.delegate = self
+            search.addTarget(self, action: #selector(self.myTextFieldDidChange), for: .editingChanged)
+            
+        }
+        
+    }
+    
     @IBOutlet weak var TableView: UITableView!{
         
         didSet{
@@ -21,7 +34,9 @@ class HomeUsers: UIViewController {
         }
         
     }
+    
     let ViewModel = UsersViewModel()
+    let underKeyboardLayoutConstraint = UnderKeyboardLayoutConstraint()
     
     var UsersListOriginal:[UsersModel.UsersData] = []
     var UsersList:[UsersModel.UsersData] = []
@@ -30,8 +45,10 @@ class HomeUsers: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        underKeyboardLayoutConstraint.setup(ButtonConstraint, view: self.view)
         configureInput(input: search, dataInput: "Buscar Usuario")
         self.hideKeyboardWhenTappedAround()
+        
         self.title = "Prueba de ingreso"
         self.GetUsers()
         
@@ -53,6 +70,67 @@ class HomeUsers: UIViewController {
                 
                 
             }
+            
+        }
+        
+    }
+    
+    @objc func myTextFieldDidChange(_ textField: UITextField) {
+        
+        if textField == search{
+            
+            BuscarNombre(nombre:search.text!){
+                
+                (result) -> () in
+                
+                self.UsersList.removeAll()
+                self.UsersList = result
+                self.TableView.setContentOffset(CGPoint(x: 0, y: 0 - self.TableView.contentInset.top), animated: true)
+                self.TableView.reloadData()
+                
+            }
+            
+        }
+        
+    }
+    
+    func BuscarNombre(nombre:String, completion: @escaping (_ result: [(UsersModel.UsersData)])->()){
+        
+        var local:[(UsersModel.UsersData)] = []
+        let cad = nombre.lowercased()
+        
+        if cad == "" || cad == " "{
+            
+            print("entre aca")
+            completion(UsersListOriginal)
+            
+        }else{
+            
+            print("no era vacio")
+            
+            for t in UsersListOriginal{
+                
+                var tag = ""
+                
+                if t.name ?? "" != ""{
+                    
+                    tag = "\(t.name ?? "")"
+                    
+                }else{
+                    
+                    tag = "N/A"
+                    
+                }
+                
+                if tag.lowercased().range(of:"\(cad)", options:.literal) != nil{
+                    
+                    local.append(t)
+                    
+                }
+                
+            }
+            
+            completion(local)
             
         }
         
