@@ -1,14 +1,15 @@
 //
-//  UsersModel.swift
+//  UsersRealm.swift
 //  CeibaContacts
 //
 //  Created by Dev IOS on 11/09/22.
 //
 
 import Foundation
- 
+import Realm
 
-class UsersModel{
+
+class UsersRealmModel:RealmSwiftObject{
     
     struct UsersData : Codable {
         let id : Int?

@@ -9,6 +9,8 @@ import UIKit
 import SkyFloatingLabelTextField
 import UnderKeyboard
 import SwiftyUserDefaults
+import Realm
+import RealmSwift
 
 var UsersData = DefaultsKey<Data?>("UsersListInfo")
 
@@ -49,6 +51,7 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
     }
     
     let ViewModel = UsersViewModel()
+    let SQLUSer = UserSQL()
     let underKeyboardLayoutConstraint = UnderKeyboardLayoutConstraint()
     
     var UsersListOriginal:[UsersModel.UsersData] = []
@@ -56,13 +59,23 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         
         underKeyboardLayoutConstraint.setup(ButtonConstraint, view: self.view)
         configureInput(input: search, dataInput: "Buscar Usuario")
         self.hideKeyboardWhenTappedAround()
         
         self.title = "Prueba de ingreso"
+        
+        //Aca Puedes Cambiar el Como guardara el Programa los datos dependiendo de la libreria
+        StorageType = .SQL
+        
+        if StorageType == .SQL{
+            
+            SQLUSer.createTable()
+            
+        }
+        
         self.Getinformation()
         
     }
@@ -70,7 +83,9 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
     
     func Getinformation(){
         
-        if StorageType == .UserDefault{
+        switch StorageType {
+            
+        case .UserDefault:
             
             if Defaults[UsersData] != nil{
                 
@@ -88,6 +103,26 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
                 
             }
             
+        case .SQL:
+            
+            let list = SQLUSer.listLikes()
+            
+            if list.count != 0{
+                
+                
+                self.UsersList = list
+                self.UsersListOriginal = list
+                self.TableView.reloadData()
+                
+                
+            }else{
+                
+                self.GetUsers()
+                
+            }
+            
+        case .Realm:
+            break
         }
         
     }
@@ -97,6 +132,16 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         ViewModel.GetUsers { Result in
             
             if Result != nil{
+                
+                if self.StorageType == .SQL{
+                    
+                    for User in Result!{
+                        
+                        self.SQLUSer.insertUser(IdFunc: User.id!, NameFunc: User.name!, PhoneFunc: User.phone!, EmailFunc: User.email!)
+                        
+                    }
+                    
+                }
                 
                 self.UsersList = Result!
                 self.UsersListOriginal = Result!
