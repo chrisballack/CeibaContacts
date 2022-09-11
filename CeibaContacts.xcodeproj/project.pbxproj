@@ -136,11 +136,10 @@
 		17527E2E28CE325E00254C77 /* Communs */ = {
 			isa = PBXGroup;
 			children = (
+				17527E6828CE953A00254C77 /* LoadingView */,
 				17527E3028CE325E00254C77 /* NetworkManager.swift */,
 				17527E4428CE333F00254C77 /* ViewConfig.swift */,
 				17527E2F28CE325E00254C77 /* EndPoints.swift */,
-				17527E6228CE80C100254C77 /* LoadingView.swift */,
-				17527E6428CE810200254C77 /* LoadingView.xib */,
 			);
 			path = Communs;
 			sourceTree = "<group>";
@@ -244,6 +243,15 @@
 				17527E5A28CE756200254C77 /* PostModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		17527E6828CE953A00254C77 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				17527E6228CE80C100254C77 /* LoadingView.swift */,
+				17527E6428CE810200254C77 /* LoadingView.xib */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		1775ADA728CE1E900019BA9E = {

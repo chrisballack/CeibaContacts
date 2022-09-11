@@ -68,8 +68,6 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         configureInput(input: search, dataInput: "Buscar Usuario")
         self.hideKeyboardWhenTappedAround()
         
-        self.title = "Prueba de ingreso"
-        
         //Aca Puedes Cambiar el Como guardara el Programa los datos dependiendo de la libreria
         StorageType = .UserDefault
         
@@ -295,8 +293,19 @@ extension HomeUsers:UITableViewDelegate,UITableViewDataSource{
         
         let cell = Bundle.main.loadNibNamed("HomeCell", owner: self, options: nil)?.first as! HomeCell
         cell.Name.text = UsersList[i].name ?? ""
+        
         cell.PhoneNumber.text = UsersList[i].phone ?? ""
+        let CallingAction = UITapGestureRecognizer(target: self, action: #selector(self.CallingAction(_:)))
+        CallingAction.tag = i
+        cell.PhoneNumber.isUserInteractionEnabled = true
+        cell.PhoneNumber.addGestureRecognizer(CallingAction)
+        
         cell.Email.text = UsersList[i].email ?? ""
+        let MailAction = UITapGestureRecognizer(target: self, action: #selector(self.MailAction(_:)))
+        MailAction.tag = i
+        cell.Email.isUserInteractionEnabled = true
+        cell.Email.addGestureRecognizer(MailAction)
+        
         cell.ButtonPublics.tag = i
         cell.ButtonPublics.addTarget(self, action: #selector(GoToPost), for: UIControl.Event.touchUpInside)
         cell.selectionStyle = .none
@@ -321,6 +330,31 @@ extension HomeUsers:UITableViewDelegate,UITableViewDataSource{
     
     }
     
+    @objc func CallingAction(_ sender: UITapGestureRecognizer? = nil) {
+        
+        let i = sender!.tag
+        
+        if let url = URL(string: "tel://\(UsersList[i].phone!)") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+    
+    }
+    
+    @objc func MailAction(_ sender: UITapGestureRecognizer? = nil) {
+        
+        let i = sender!.tag
+        
+        let email = UsersList[i].email!
+        if let url = URL(string: "mailto:\(email)") {
+          if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url)
+          } else {
+            UIApplication.shared.openURL(url)
+          }
+        }
+    
+    }
+    
 }
 
 
@@ -339,5 +373,25 @@ extension UIViewController {
         view.endEditing(true)
         
     }
+    
+}
+
+extension UITapGestureRecognizer{
+    
+    private struct theAnswer {
+            static var tag: Int = -1
+        }
+
+        var tag: Int {
+            get {
+                guard let thetag = objc_getAssociatedObject(self, &theAnswer.tag) as? Int else {
+                    return -1
+                }
+                return thetag
+            }
+            set {
+                objc_setAssociatedObject(self, &theAnswer.tag, newValue, .OBJC_ASSOCIATION_RETAIN)
+            }
+        }
     
 }

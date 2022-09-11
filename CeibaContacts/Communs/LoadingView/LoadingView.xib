@@ -46,6 +46,9 @@
             <point key="canvasLocation" x="-42.028985507246382" y="148.99553571428569"/>
         </view>
     </objects>
+    <designables>
+        <designable name="J3t-dI-yQ4"/>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

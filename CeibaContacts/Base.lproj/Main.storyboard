@@ -188,7 +188,7 @@
     </scenes>
     <designables>
         <designable name="3IM-5g-FGV">
-            <size key="intrinsicContentSize" width="374" height="36.493671875000004"/>
+            <size key="intrinsicContentSize" width="38" height="15.5"/>
         </designable>
     </designables>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
