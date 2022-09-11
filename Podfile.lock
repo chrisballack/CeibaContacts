@@ -1,34 +1,48 @@
 PODS:
   - Alamofire (4.9.1)
   - lottie-ios (3.4.2)
+  - Realm (10.28.6):
+    - Realm/Headers (= 10.28.6)
+  - Realm/Headers (10.28.6)
+  - RealmSwift (10.28.6):
+    - Realm (= 10.28.6)
   - SkyFloatingLabelTextField (3.8.0)
   - SQLite.swift (0.13.3):
     - SQLite.swift/standard (= 0.13.3)
   - SQLite.swift/standard (0.13.3)
+  - SwiftyUserDefaults (4.0.0)
   - UnderKeyboard (13.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - lottie-ios
+  - RealmSwift (~> 10)
   - SkyFloatingLabelTextField (~> 3.0)
   - SQLite.swift (~> 0.13.3)
+  - SwiftyUserDefaults (~> 4.0)
   - UnderKeyboard (~> 13.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - lottie-ios
+    - Realm
+    - RealmSwift
     - SkyFloatingLabelTextField
     - SQLite.swift
+    - SwiftyUserDefaults
     - UnderKeyboard
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   lottie-ios: 6bbc53eef6957e4744a50321507015fba72d8ca6
+  Realm: 9b12f16a14446d7d46a9e36225d0a0332a6ec739
+  RealmSwift: 5927726fce21005f43b1fb57c832297a22031bfc
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
+  SwiftyUserDefaults: 6a1951df1daa19337862b677dd9a4b9bd4c288cd
   UnderKeyboard: 79ea6feb497af99c1856aaae0ab8ded3c739f745
 
-PODFILE CHECKSUM: d7acf08bdc47180788a379faadcd72f23ef51324
+PODFILE CHECKSUM: 447086032a948be60c75ffff26697f3672cf5c01
 
 COCOAPODS: 1.11.3

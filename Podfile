@@ -12,6 +12,9 @@ target 'CeibaContacts' do
  	pod 'lottie-ios'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'UnderKeyboard', '~> 13.0'
+  pod 'RealmSwift', '~>10'
+  pod 'SQLite.swift', '~> 0.13.3'
+  pod 'SwiftyUserDefaults', '~> 4.0'
 
   target 'CeibaContactsTests' do
     inherit! :search_paths
