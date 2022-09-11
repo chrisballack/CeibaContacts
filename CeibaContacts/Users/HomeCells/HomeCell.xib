@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -81,7 +80,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="CardsBackGraund"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="0fw-Ht-g0i" secondAttribute="trailing" constant="24" id="6wQ-qx-dNi"/>
                             <constraint firstAttribute="trailing" secondItem="tTX-08-JvQ" secondAttribute="trailing" constant="16" id="8C5-lF-cYd"/>
@@ -121,11 +120,11 @@
     <resources>
         <image name="mail" catalog="system" width="128" height="93"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="CardsBackGraund">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="HomeGreenColor">
             <color red="0.17254901960784313" green="0.2627450980392157" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

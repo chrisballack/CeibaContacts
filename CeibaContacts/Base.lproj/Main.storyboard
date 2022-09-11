@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -60,10 +59,13 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" red="0.42745098040000001" green="0.44705882349999998" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="3IM-5g-FGV" firstAttribute="top" secondItem="vgD-Qk-G6U" secondAttribute="top" id="AQU-CK-HFf"/>
                                     <constraint firstAttribute="bottom" secondItem="3IM-5g-FGV" secondAttribute="bottom" id="LXA-Y5-DIG"/>
@@ -83,9 +85,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="o8b-en-lq0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="o8b-en-lq0">
                                 <rect key="frame" x="0.0" y="158" width="414" height="704"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="7Tp-VZ-4nD"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="6e5-dz-1Ls"/>
@@ -105,7 +107,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="ListBackGraundColor"/>
                         <constraints>
                             <constraint firstItem="o8b-en-lq0" firstAttribute="top" secondItem="3IM-5g-FGV" secondAttribute="bottom" constant="16" id="20D-Ik-50E"/>
                             <constraint firstItem="vgD-Qk-G6U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="76I-sk-FBG"/>
@@ -141,7 +143,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PnW-U1-fYX">
                                 <rect key="frame" x="0.0" y="96" width="414" height="766"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="PmA-Eh-Qmn" id="2aZ-xD-pNE"/>
                                     <outlet property="delegate" destination="PmA-Eh-Qmn" id="O0u-tK-yq5"/>
@@ -161,7 +163,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZHq-XG-fzL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="ListBackGraundColor"/>
                         <constraints>
                             <constraint firstItem="PnW-U1-fYX" firstAttribute="top" secondItem="ZHq-XG-fzL" secondAttribute="top" constant="8" id="40E-qs-0rj"/>
                             <constraint firstItem="THA-kM-F1g" firstAttribute="centerX" secondItem="PnW-U1-fYX" secondAttribute="centerX" id="874-0m-Gyi"/>
@@ -194,8 +196,8 @@
         <namedColor name="HomeGreenColor">
             <color red="0.17254901960784313" green="0.2627450980392157" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="ListBackGraundColor">
+            <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
