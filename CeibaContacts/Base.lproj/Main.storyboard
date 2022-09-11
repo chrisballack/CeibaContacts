@@ -142,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PnW-U1-fYX">
-                                <rect key="frame" x="0.0" y="96" width="414" height="766"/>
+                                <rect key="frame" x="0.0" y="203.5" width="414" height="658.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="PmA-Eh-Qmn" id="2aZ-xD-pNE"/>
@@ -150,7 +150,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="1000" text=" List is empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THA-kM-F1g">
-                                <rect key="frame" x="147.5" y="469" width="119" height="20"/>
+                                <rect key="frame" x="147.5" y="523" width="119" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Lps-K4-Fkm"/>
                                 </constraints>
@@ -161,16 +161,85 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="noJobAvailable"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3x-zF-60G" customClass="UIViewX" customModule="CeibaContacts" customModuleProvider="target">
+                                <rect key="frame" x="16" y="103" width="382" height="92.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="umo-E7-AWI">
+                                        <rect key="frame" x="8" y="4" width="366" height="84.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ku2-l1-iFw">
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" name="HomeGreenColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0YU-nu-m1Y">
+                                                <rect key="frame" x="0.0" y="28.5" width="366" height="24"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tAY-J8-b5N">
+                                                        <rect key="frame" x="0.0" y="1.5" width="24" height="21.5"/>
+                                                        <color key="tintColor" name="HomeGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="Aal-fz-6DH"/>
+                                                            <constraint firstAttribute="height" constant="24" id="aHA-kl-1OL"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVD-bY-rz2">
+                                                        <rect key="frame" x="32" y="0.0" width="334" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uVw-xW-14q">
+                                                <rect key="frame" x="0.0" y="60.5" width="366" height="24"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dQB-9R-s7Q">
+                                                        <rect key="frame" x="0.0" y="1" width="24" height="21.5"/>
+                                                        <color key="tintColor" name="HomeGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="6B2-Ew-muz"/>
+                                                            <constraint firstAttribute="height" constant="24" id="xgr-4p-aUi"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq2-Ko-F8R">
+                                                        <rect key="frame" x="32" y="0.0" width="334" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="CardsBackGraund"/>
+                                <constraints>
+                                    <constraint firstItem="umo-E7-AWI" firstAttribute="top" secondItem="f3x-zF-60G" secondAttribute="top" constant="4" id="AkJ-r9-oK9"/>
+                                    <constraint firstAttribute="bottom" secondItem="umo-E7-AWI" secondAttribute="bottom" constant="4" id="T3g-VU-IqQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="umo-E7-AWI" secondAttribute="trailing" constant="8" id="TtF-Fb-0kr"/>
+                                    <constraint firstItem="umo-E7-AWI" firstAttribute="leading" secondItem="f3x-zF-60G" secondAttribute="leading" constant="8" id="g9r-1V-6XY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZHq-XG-fzL"/>
                         <color key="backgroundColor" name="ListBackGraundColor"/>
                         <constraints>
-                            <constraint firstItem="PnW-U1-fYX" firstAttribute="top" secondItem="ZHq-XG-fzL" secondAttribute="top" constant="8" id="40E-qs-0rj"/>
                             <constraint firstItem="THA-kM-F1g" firstAttribute="centerX" secondItem="PnW-U1-fYX" secondAttribute="centerX" id="874-0m-Gyi"/>
+                            <constraint firstItem="f3x-zF-60G" firstAttribute="trailing" secondItem="ZHq-XG-fzL" secondAttribute="trailing" constant="-16" id="Hw2-4P-klD"/>
+                            <constraint firstItem="f3x-zF-60G" firstAttribute="leading" secondItem="ZHq-XG-fzL" secondAttribute="leading" constant="16" id="XfQ-6w-6hU"/>
                             <constraint firstItem="ZHq-XG-fzL" firstAttribute="bottom" secondItem="PnW-U1-fYX" secondAttribute="bottom" id="b7y-Ub-7Pi"/>
                             <constraint firstItem="ZHq-XG-fzL" firstAttribute="trailing" secondItem="PnW-U1-fYX" secondAttribute="trailing" id="bBf-aF-Jbf"/>
                             <constraint firstItem="THA-kM-F1g" firstAttribute="centerY" secondItem="PnW-U1-fYX" secondAttribute="centerY" id="cB4-Mb-BSL"/>
+                            <constraint firstItem="f3x-zF-60G" firstAttribute="top" secondItem="ZHq-XG-fzL" secondAttribute="top" constant="15" id="qBQ-a7-qjx"/>
                             <constraint firstItem="PnW-U1-fYX" firstAttribute="leading" secondItem="ZHq-XG-fzL" secondAttribute="leading" id="siA-Ni-Nsw"/>
+                            <constraint firstItem="PnW-U1-fYX" firstAttribute="top" secondItem="f3x-zF-60G" secondAttribute="bottom" constant="8" id="zuP-dy-sW6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Posts" id="JrG-RY-CH7">
@@ -178,21 +247,29 @@
                     </navigationItem>
                     <connections>
                         <outlet property="EmptyTable" destination="THA-kM-F1g" id="A29-9P-3M2"/>
+                        <outlet property="Mail" destination="Uq2-Ko-F8R" id="zXV-a5-mzD"/>
+                        <outlet property="Name" destination="Ku2-l1-iFw" id="vFI-mm-OFY"/>
+                        <outlet property="Phone" destination="yVD-bY-rz2" id="K9G-ua-7v8"/>
                         <outlet property="TableView" destination="PnW-U1-fYX" id="adV-fy-xen"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6v-5N-8dX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="42"/>
+            <point key="canvasLocation" x="757.97101449275374" y="41.517857142857139"/>
         </scene>
     </scenes>
     <designables>
         <designable name="3IM-5g-FGV">
-            <size key="intrinsicContentSize" width="38" height="15.5"/>
+            <size key="intrinsicContentSize" width="374" height="36.493671875000004"/>
         </designable>
     </designables>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
+        <image name="mail" catalog="system" width="128" height="93"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="CardsBackGraund">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="HomeGreenColor">
             <color red="0.17254901960784313" green="0.2627450980392157" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

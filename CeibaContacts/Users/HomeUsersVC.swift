@@ -59,7 +59,7 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
     var UsersList:[UsersModel.UsersData] = []
     
     let realm = try! Realm()
-    var UserID:Int?
+    var UserInfo:UsersModel.UsersData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -270,7 +270,7 @@ class HomeUsers: UIViewController,UITextFieldDelegate {
         
         if let vc = segue.destination as? PostVC {
             
-            vc.UserID = UserID
+            vc.UserInfo = UserInfo
             
         }
         
@@ -325,11 +325,12 @@ extension HomeUsers:UITableViewDelegate,UITableViewDataSource{
     @objc func GoToPost( sender: UIButton!) {
         
         let i = sender.tag
-        UserID = UsersList[i].id
+        UserInfo = UsersList[i]
         self.performSegue(withIdentifier: "Post", sender: nil)
     
     }
     
+    //Enviar llamar al numero del usuario
     @objc func CallingAction(_ sender: UITapGestureRecognizer? = nil) {
         
         let i = sender!.tag
@@ -340,6 +341,7 @@ extension HomeUsers:UITableViewDelegate,UITableViewDataSource{
     
     }
     
+    //Enviar Mail a el correo del usuario
     @objc func MailAction(_ sender: UITapGestureRecognizer? = nil) {
         
         let i = sender!.tag
